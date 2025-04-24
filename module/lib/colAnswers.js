@@ -6,14 +6,14 @@ const rl = readline.createInterface({
 
 module.exports = (questions, done) => {
   const answers = [];
-  const [firstQuestion] = questions;
+  const [firstQue] = questions;
 
-  const questionAnswered = (answer) => {
+  const queAnswered = (answer) => {
     answers.push(answer.trim());
     if (answers.length < questions.length) {
       rl.question(
         questions[answers.length],
-        questionAnswered
+        quesAnswered
       );
     } else {
       return done(answers);
