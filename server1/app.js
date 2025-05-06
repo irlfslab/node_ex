@@ -10,6 +10,6 @@ const server = http.createServer((request, response) => {
     response.end();
 })
 
-server.listen(port.host,() => {
+server.listen(port,host,() => {
     console.log('ready');
 })
